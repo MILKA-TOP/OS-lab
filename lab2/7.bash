@@ -15,7 +15,7 @@ do
 
 done
 
-sleep 60s
+sleep 10s
 
 for pid in $list
 do

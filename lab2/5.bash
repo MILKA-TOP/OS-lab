@@ -1,4 +1,4 @@
-#!bin/bash
+Sd#!bin/bash
 cat pid4 | awk '
 BEGIN {
 ppid=0;
