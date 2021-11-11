@@ -1,2 +1,5 @@
 #!bin/bash
-ps aux --sort=start_time | tail -n7 | head -n1 | awk '{print $2}'
+pid=$$
+ppid=$PPID
+#echo $pid, $ppid
+ps ax o pid,ppid --sort=start_time | awk -v pid=$pid -v ppid=$ppid '{if ( $2 != pid && $2 != ppid) print $0 }' | tail -n1 | awk '{print $1}'
