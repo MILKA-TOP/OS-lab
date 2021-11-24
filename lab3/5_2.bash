@@ -26,9 +26,9 @@ while true; do
 	if [[ $line =~ $re ]]
 	then
 	    case "$type" in
-	    "+") result=$(($result + $line))
+	    "+") result=$((bc <<< '$result + $line'))
 		;;
-	    "*") result=$(($result * $line))
+	    "*") result=$(bc <<< '($result * $line'))
 		;;
 	    esac
 	else
