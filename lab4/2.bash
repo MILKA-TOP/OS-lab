@@ -11,8 +11,8 @@ if ! [ -f "$HOME/trash.log" ]; then
     echo "ERROR: .log file is not exist"
     exit 0
 fi
-
-for line in $(cat "$HOME/trash.log")
+lines=$(cat "$HOME/trash.log")
+for line in $lines
 do
     file_path=$(echo $line | awk 'BEGIN{FS=":"} {print $1}')
     file_link=$(echo $line | awk 'BEGIN{FS=":"} {print $2}')
@@ -41,6 +41,8 @@ do
 	    done
 	    ln "$HOME/.trash/$file_link" "$create_path/$file_name"
 	    rm "$HOME/.trash/$file_link"
+	    grep -v "$line" "$HOME/trash.log" > $HOME/trash.log_temp
+	    mv -f $HOME/trash.log_temp $HOME/trash.log
 	    echo "File $create_path/'$file_name' was created"
 	fi
     fi
