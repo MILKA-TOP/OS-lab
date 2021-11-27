@@ -1,7 +1,12 @@
 #!bin/bash
-ps uxa | awk '{print $2, $11}' | grep '/sbin/'  | awk '
-{ 
-    if (match($2, "/sbin") == 1 ) {
-	print $1
-    }
-}' > pid2
+list=$(ps aux | awk '{print $2}' | tail -n +2)
+for pid in $list
+do
+    link=$(readlink -f /proc/$pid/exe)
+    grep_check=$(echo $link | grep '/sbin/')
+    if ! [ -z $grep_check ]; then
+	echo $pid, $grep_check
+    fi
+#    echo $pid, $link
+
+done
