@@ -1,0 +1,4 @@
+[  651.658766] [   6444]     0  6444   410313   165104  2920448   189646             0 mem.bash
+[  651.660353] oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-0.slice/session-1.scope,task=mem.bash,pid=6444,uid=0
+[  651.662017] Out of memory: Killed process 6444 (mem.bash) total-vm:1641252kB, anon-rss:660416kB, file-rss:0kB, shmem-rss:0kB, UID:0 pgtables:2852kB oom_score_adj:0
+[  651.847479] oom_reaper: reaped process 6444 (mem.bash), now anon-rss:0kB, file-rss:0kB, shmem-rss:0kB
