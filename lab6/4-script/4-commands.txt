@@ -1,0 +1,5 @@
+
+
+[] driverquery /NH /FO TABLE - drivers, where NF withou top pannel and FO - table forat
+
+[] sort /R DRIVERS.txt - reverse sort

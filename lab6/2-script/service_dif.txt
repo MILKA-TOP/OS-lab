@@ -1,0 +1,2 @@
+
+C:\Users\IEUser\lab6\2-script>fc ../3-script/service_list1.txt ../3-script/service_list2.txt 

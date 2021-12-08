@@ -1,0 +1,24 @@
+
+
+[] hostname - get hostname
+
+
+[] net share temp=C:\%COMPUTERNAME%\temp /grant:everyone,FULL - 
+create network resource. for _everyone_ and WIRTE+READ=_FULL_
+
+[] SCHTASKS /Create /SC MINUTE /TN copy /TR copy_bat.bat - 
+make task for 1 minute
+
+[] SCHTASKS /query | find "copy" - 
+find in query task with name "copy"
+
+[] SCHTASKS  /delete /TN copy - 
+delete "copy" from query
+
+[] fc [path_file_1] [path_file_2] - check 2 file
+
+[] xcopy /Z %%f \\%COMPUTERNAME%\temp\%%~nxf - 
+copy file to the network resource
+
+[] FOR %%f IN (C:\Windows\*) DO () -
+read all files in "C:\Windows\*"

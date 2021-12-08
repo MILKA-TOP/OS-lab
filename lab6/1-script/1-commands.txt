@@ -1,0 +1,11 @@
+
+
+ver - version of OS Windows
+
+mem - getting memory information
+
+WMIC logicaldisk - getting information about local disks
+
+copy * [DIR_NAME]- copy all files into /DIR_NAME/
+
+copy * [FILE_NAME]- copy all content from all files into FILE_NAME

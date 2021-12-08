@@ -1,0 +1,7 @@
+
+
+[] net start - get list of active network services
+
+[] net stop dnscache - stop service DNS-client
+
+[] net start dnscache - start service DNS-client

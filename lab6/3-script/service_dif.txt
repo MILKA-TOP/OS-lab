@@ -1,0 +1,12 @@
+
+C:\Users\IEUser\lab6\3-script>fc service_list1.txt service_list2.txt 
+Comparing files service_list1.txt and SERVICE_LIST2.TXT
+***** service_list1.txt
+   Distributed Link Tracking Client
+   DNS Client
+   Function Discovery Resource Publication
+***** SERVICE_LIST2.TXT
+   Distributed Link Tracking Client
+   Function Discovery Resource Publication
+*****
+
